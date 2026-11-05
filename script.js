@@ -43,6 +43,8 @@
   var emailError = document.getElementById("email-error");
   var phoneError = document.getElementById("phone-error");
   var contactError = document.getElementById("contact-error");
+  var consentInput = document.getElementById("consent");
+  var consentError = document.getElementById("consent-error");
 
   function setFieldError(input, errorEl, message) {
     errorEl.textContent = message;
@@ -73,6 +75,9 @@
     setFieldError(phoneInput, phoneError, "");
     contactError.textContent = "";
   });
+  consentInput.addEventListener("change", function () {
+    setFieldError(consentInput, consentError, "");
+  });
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -90,15 +95,19 @@
     var hasValidContact = (email && !emailMsg) || (phone && !phoneMsg);
     var contactMsg = !email && !phone ? "Enter an email address or a mobile number. You can provide both." : "";
 
+    var consentMsg = consentInput.checked ? "" : "Please agree before sending.";
+
     setFieldError(nameInput, nameError, nameMsg);
     setFieldError(emailInput, emailError, emailMsg);
     setFieldError(phoneInput, phoneError, phoneMsg);
+    setFieldError(consentInput, consentError, consentMsg);
     contactError.textContent = contactMsg;
 
-    if (nameMsg || emailMsg || phoneMsg || contactMsg || !hasValidContact) {
+    if (nameMsg || emailMsg || phoneMsg || contactMsg || consentMsg || !hasValidContact) {
       if (nameMsg) nameInput.focus();
       else if (emailMsg || contactMsg) emailInput.focus();
-      else phoneInput.focus();
+      else if (phoneMsg) phoneInput.focus();
+      else consentInput.focus();
       return;
     }
 
@@ -106,6 +115,7 @@
     setFieldError(nameInput, nameError, "");
     setFieldError(emailInput, emailError, "");
     setFieldError(phoneInput, phoneError, "");
+    setFieldError(consentInput, consentError, "");
     contactError.textContent = "";
     confirmation.hidden = false;
     confirmation.focus();

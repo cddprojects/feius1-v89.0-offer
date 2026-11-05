@@ -610,13 +610,30 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   font-weight: 600;
   scroll-margin-top: 96px;
 }
-.form-panel .btn { margin-top: 6px; }
+.form-panel .btn { margin-top: 14px; }
 .form-panel .lede { max-width: 36rem; margin-bottom: 18px; }
 .form-legal {
-  margin: 16px 0 0;
+  margin: 4px 0 0;
   font-size: 0.95rem;
 }
+.consent {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  color: var(--ink);
+  font-weight: 560;
+  cursor: pointer;
+}
+.consent input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--forest);
+}
 .form-legal a {
+  display: inline-block;
+  margin: 8px 0 0 30px;
   color: var(--forest);
   font-weight: 700;
   text-underline-offset: 0.22em;
