@@ -334,7 +334,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   overflow: hidden;
   background: var(--forest);
   color: #f6f3ec;
-  padding: clamp(76px, 10vw, 116px) 0 128px;
+  padding: clamp(76px, 10vw, 116px) 0;
 }
 .worth-head {
   display: grid;
@@ -395,18 +395,14 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
 }
 
 .quote {
-  position: relative;
-  z-index: 2;
-  margin-top: -78px;
-  padding: 0 0 12px;
+  padding: clamp(56px, 8vw, 84px) 0 clamp(12px, 2vw, 20px);
+  background: var(--paper);
 }
 .quote-panel {
   margin: 0 auto;
-  max-width: 60rem;
-  padding: clamp(36px, 5vw, 64px) clamp(28px, 5vw, 72px) clamp(32px, 4vw, 52px);
-  background: #fff;
-  border-radius: 32px;
-  box-shadow: 0 30px 70px rgba(20, 53, 45, 0.16);
+  max-width: 46rem;
+  padding: 0;
+  background: transparent;
 }
 .quote blockquote { margin: 0; }
 .quote .famous { text-align: center; }
@@ -416,17 +412,16 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 560;
-  font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
   line-height: 1.25;
   letter-spacing: -0.03em;
 }
 .quote .famous p::before {
   content: "“";
   display: block;
-  height: 0.42em;
-  margin-bottom: 0.08em;
-  color: var(--forest);
-  font-size: 5.4rem;
+  margin-bottom: 0.05em;
+  color: var(--green-mid);
+  font-size: 2.4rem;
   line-height: 1;
 }
 .quote .famous footer {
@@ -456,10 +451,8 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
 .quote .lived p {
   margin: 0;
   color: var(--muted);
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(1.12rem, 1.6vw, 1.28rem);
-  line-height: 1.55;
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
 .quote .lived p::before { content: "“"; }
 .quote .lived p::after { content: "”"; }
@@ -830,7 +823,6 @@ details[open] .chev::after { transform: scaleY(0); }
   .worth-head, .interest-split { grid-template-columns: 1fr; }
   .interest-photo { aspect-ratio: 16 / 9; min-height: 0; }
   .interest-photo img { height: 100%; }
-  .quote { margin-top: -36px; }
   .steps { grid-template-columns: 1fr; gap: 14px; }
   .steps::before { display: none; }
   .faq .wrap { grid-template-columns: 1fr; gap: 8px; }
