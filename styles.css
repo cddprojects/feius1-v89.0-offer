@@ -313,6 +313,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   gap: 22px 32px;
   margin-top: 22px;
 }
+.overlook li:nth-child(2) { padding-left: 28px; }
 .overlook .ico {
   width: 40px;
   height: 40px;
@@ -738,6 +739,7 @@ details[open] .chev::after { transform: scaleY(0); }
   .skill-list li:nth-child(2),
   .skill-list li:nth-child(3) { margin-left: 0; }
   .overlook { grid-template-columns: 1fr; gap: 18px; }
+  .overlook li:nth-child(2) { padding-left: 0; }
   .know { grid-template-columns: 1fr; }
   .worth-head, .interest-split { grid-template-columns: 1fr; }
   .interest-photo { aspect-ratio: 16 / 9; min-height: 0; }
