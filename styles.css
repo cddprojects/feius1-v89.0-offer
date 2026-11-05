@@ -421,10 +421,25 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   padding: clamp(48px, 6vw, 72px) 0 clamp(28px, 4vw, 40px);
   background: var(--paper);
 }
-.quote-panel {
-  margin: 0 auto;
+.testimonial-label {
+  margin: 0 auto 22px;
+  text-align: center;
+  color: var(--green-mid);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.testimonial-list {
+  display: grid;
+  gap: 22px;
   max-width: 54rem;
-  padding: clamp(32px, 4vw, 52px) clamp(28px, 5vw, 64px);
+  margin: 0 auto;
+}
+.quote-panel {
+  margin: 0;
+  padding: clamp(32px, 4vw, 48px) clamp(28px, 5vw, 56px);
   background: #fff;
   border-radius: 28px;
   box-shadow: 0 18px 44px rgba(20, 53, 45, 0.08);
@@ -443,17 +458,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   font-size: clamp(1.15rem, 1.7vw, 1.35rem);
   line-height: 1.55;
 }
-.quote .lived .testimonial-label {
-  margin: 0 0 8px;
-  color: var(--green-mid);
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-.quote .lived p:not(.testimonial-label)::before {
+.quote .lived p::before {
   content: "“";
   display: block;
   margin-bottom: 0.12em;
