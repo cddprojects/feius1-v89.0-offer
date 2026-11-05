@@ -657,8 +657,6 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   accent-color: var(--forest);
 }
 .form-legal a {
-  display: inline-block;
-  margin: 8px 0 0 30px;
   color: var(--forest);
   font-weight: 700;
   text-underline-offset: 0.22em;
