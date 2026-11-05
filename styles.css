@@ -632,17 +632,6 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   font-weight: 600;
 }
 .field-error:empty { display: none; }
-.confirmation {
-  margin: 0 0 20px;
-  padding: 14px 16px;
-  background: var(--paper);
-  color: var(--forest);
-  border-radius: 14px;
-  border: 1px solid var(--sage-deep);
-  box-shadow: inset 3px 0 0 var(--lime);
-  font-weight: 600;
-  scroll-margin-top: 96px;
-}
 .form-panel .btn { margin-top: 14px; }
 .form-panel .lede { max-width: 36rem; margin-bottom: 18px; }
 .form-legal {
@@ -800,6 +789,7 @@ details[open] .chev::after { transform: scaleY(0); }
   padding: clamp(56px, 8vw, 96px) 0 clamp(80px, 10vw, 120px);
 }
 .page h1 { max-width: 12em; }
+.thanks .btn { margin-top: 12px; }
 .page p { max-width: 40rem; }
 .page a { color: var(--forest); font-weight: 700; text-underline-offset: 0.2em; }
 .policy { max-width: 44rem; }

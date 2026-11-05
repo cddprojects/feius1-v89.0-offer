@@ -35,7 +35,6 @@
 (function () {
   var form = document.getElementById("interest-form");
   if (!form) return;
-  var confirmation = document.getElementById("form-confirmation");
   var nameInput = document.getElementById("name");
   var emailInput = document.getElementById("email");
   var phoneInput = document.getElementById("phone");
@@ -83,8 +82,6 @@
     event.preventDefault();
     if (form.getAttribute("data-lock") === "1") return;
 
-    confirmation.hidden = true;
-
     var name = nameInput.value.trim();
     var email = emailInput.value.trim();
     var phone = phoneInput.value.trim();
@@ -111,17 +108,7 @@
       return;
     }
 
-    form.reset();
-    setFieldError(nameInput, nameError, "");
-    setFieldError(emailInput, emailError, "");
-    setFieldError(phoneInput, phoneError, "");
-    setFieldError(consentInput, consentError, "");
-    contactError.textContent = "";
-    confirmation.hidden = false;
-    confirmation.focus();
     form.setAttribute("data-lock", "1");
-    window.setTimeout(function () {
-      form.removeAttribute("data-lock");
-    }, 800);
+    window.location.href = "thank-you.html";
   });
 })();
