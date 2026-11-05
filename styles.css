@@ -717,21 +717,20 @@ details[open] .chev::after { transform: scaleY(0); }
 .site-footer {
   background: var(--forest-deep);
   color: #d7e6de;
-  padding: 8px 0;
+  padding: clamp(48px, 7vw, 76px) 0 28px;
 }
-.footer-bar {
+.footer-main {
   display: grid;
-  gap: 18px;
-  padding: 32px 0;
-  align-items: center;
+  gap: 36px;
 }
 .footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
+  max-width: 24rem;
 }
-.site-footer p { margin: 0; color: #c9ddd4; max-width: 36rem; }
+.site-footer p { margin: 0; color: #c9ddd4; }
 .slogan {
   margin: 0;
   color: #fff;
@@ -741,11 +740,40 @@ details[open] .chev::after { transform: scaleY(0); }
   letter-spacing: -0.03em;
   line-height: 1.15;
 }
-.footer-end {
+.footer-brand p:last-child { max-width: 26rem; font-size: 0.98rem; }
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 36px;
+}
+.footer-col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
+}
+.footer-label {
+  margin: 0 0 4px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.footer-col a {
+  color: #d7e6de;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 0.22em; }
+.footer-note { max-width: 16rem; font-size: 0.95rem; }
+.footer-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 .footer-links { margin: 0; }
 .footer-links a {
@@ -766,11 +794,11 @@ details[open] .chev::after { transform: scaleY(0); }
 #work, #worth, #quote, #week, #faq, h2 { scroll-margin-top: 96px; }
 
 @media (min-width: 801px) {
-  .footer-bar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 28px 36px;
+  .footer-main {
+    grid-template-columns: minmax(260px, 1.15fr) minmax(320px, 0.9fr);
+    align-items: start;
+    gap: 40px 72px;
   }
-  .footer-end { align-items: flex-end; text-align: right; }
 }
 
 @media (max-width: 960px) {
