@@ -298,7 +298,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   color: #f6f3ec;
   padding: clamp(76px, 10vw, 116px) 0;
 }
-.worth h2 { color: #f6f3ec; max-width: 14ch; }
+.worth h2 { color: #f6f3ec; max-width: 11em; }
 .worth .lede { color: #d5e6de; margin-bottom: 0; }
 .panel {
   margin-top: 36px;
@@ -318,7 +318,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
 .know { margin: 0; }
 .know div {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
+  grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr);
   gap: 12px 18px;
   align-items: baseline;
   padding: 16px 0;
@@ -448,6 +448,16 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   scroll-margin-top: 96px;
 }
 .form-panel .btn { margin-top: 6px; }
+.form-panel .lede { max-width: 36rem; margin-bottom: 18px; }
+.form-legal {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+}
+.form-legal a {
+  color: var(--forest);
+  font-weight: 700;
+  text-underline-offset: 0.22em;
+}
 
 .faq { padding: 0 0 clamp(80px, 10vw, 120px); }
 .faq .wrap { max-width: 760px; margin-right: auto; margin-left: max(24px, calc((100vw - min(var(--wrap), 100vw - 48px)) / 2)); }
@@ -497,11 +507,27 @@ details[open] .chev::after { transform: scaleY(0); }
   align-items: center;
 }
 .site-footer p { margin: 0; color: #c9ddd4; max-width: 36rem; }
-.to-top {
+.slogan {
+  margin: 0 0 6px;
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.footer-links { margin: 0; }
+.footer-links a {
   color: #fff;
   font-weight: 700;
   text-underline-offset: 0.25em;
 }
+.page {
+  padding: clamp(56px, 8vw, 96px) 0 clamp(80px, 10vw, 120px);
+}
+.page h1 { max-width: 12em; }
+.page p { max-width: 40rem; }
+.page a { color: var(--forest); font-weight: 700; text-underline-offset: 0.2em; }
 #work, #worth, #quote, #week, #faq, h2 { scroll-margin-top: 96px; }
 
 @media (min-width: 801px) {
@@ -559,6 +585,10 @@ details[open] .chev::after { transform: scaleY(0); }
     font-size: 1.05rem;
   }
   .site-nav .btn { justify-content: space-between; margin-top: 8px; }
+}
+
+@media (max-width: 700px) {
+  .know div { grid-template-columns: 1fr; gap: 4px; }
 }
 
 @media (max-width: 560px) {

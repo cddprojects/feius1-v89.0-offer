@@ -34,6 +34,7 @@
 
 (function () {
   var form = document.getElementById("interest-form");
+  if (!form) return;
   var confirmation = document.getElementById("form-confirmation");
   var nameInput = document.getElementById("name");
   var emailInput = document.getElementById("email");
@@ -87,7 +88,7 @@
     var emailMsg = email && !isValidEmail(email) ? "Enter a valid email address." : "";
     var phoneMsg = phone && !isValidPhone(phone) ? "Enter a valid 10-digit mobile number." : "";
     var hasValidContact = (email && !emailMsg) || (phone && !phoneMsg);
-    var contactMsg = !email && !phone ? "Enter an email address, a mobile number, or both." : "";
+    var contactMsg = !email && !phone ? "Enter an email address or a mobile number. You can provide both." : "";
 
     setFieldError(nameInput, nameError, nameMsg);
     setFieldError(emailInput, emailError, emailMsg);
