@@ -401,7 +401,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   padding: 0 0 12px;
 }
 .quote-panel {
-  margin: 0 0 0 auto;
+  margin: 0 auto;
   max-width: 46rem;
   padding: clamp(28px, 4vw, 44px) clamp(26px, 4vw, 40px) clamp(30px, 4vw, 46px);
   background: #fff;
@@ -760,7 +760,6 @@ details[open] .chev::after { transform: scaleY(0); }
   .interest-photo { aspect-ratio: 16 / 9; min-height: 0; }
   .interest-photo img { height: 100%; }
   .quote { margin-top: -36px; }
-  .quote-panel { margin-left: 0; }
   .steps { grid-template-columns: 1fr; gap: 14px; }
   .steps::before { display: none; }
   .faq .wrap { grid-template-columns: 1fr; gap: 8px; }
