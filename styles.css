@@ -454,8 +454,24 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   font-size: 1.02rem;
   line-height: 1.6;
 }
-.quote .lived p::before { content: "“"; }
-.quote .lived p::after { content: "”"; }
+.quote .lived .testimonial-label {
+  margin: 0 0 12px;
+  color: var(--green-mid);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.experience-note {
+  margin: 14px auto 0;
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+.quote .lived p:not(.testimonial-label)::before { content: "“"; }
+.quote .lived p:not(.testimonial-label)::after { content: "”"; }
 .quote .lived footer {
   display: flex;
   flex-wrap: wrap;
