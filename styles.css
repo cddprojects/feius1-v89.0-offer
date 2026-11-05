@@ -761,10 +761,11 @@ details[open] .chev::after { transform: scaleY(0); }
 .footer-col a {
   color: #d7e6de;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 0.86rem;
+  font-weight: 500;
 }
 .footer-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 0.22em; }
-.footer-note { max-width: 18rem; font-size: 0.95rem; }
+.footer-note { max-width: 18rem; font-size: 0.86rem; }
 .footer-base {
   display: flex;
   flex-wrap: wrap;
