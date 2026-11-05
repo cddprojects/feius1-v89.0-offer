@@ -263,6 +263,29 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
 }
 .work-intro { position: sticky; top: calc(var(--header) + 28px); }
 .work .lede { max-width: 28rem; }
+.closer {
+  margin: 28px 0 0;
+  max-width: 22rem;
+  padding-top: 22px;
+  border-top: 1px solid #dddcd4;
+}
+.closer p {
+  margin: 0;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.28rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.closer footer {
+  margin-top: 10px;
+  color: var(--green-mid);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 .work-note {
   margin: 22px 0 0;
   max-width: 28rem;
@@ -405,46 +428,8 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   background: transparent;
 }
 .quote blockquote { margin: 0; }
-.quote .famous { text-align: center; }
-.quote .famous p {
-  margin: 0 auto;
-  max-width: 18em;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-weight: 560;
-  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-}
-.quote .famous p::before {
-  content: "“";
-  display: block;
-  margin-bottom: 0.05em;
-  color: var(--green-mid);
-  font-size: 2.4rem;
-  line-height: 1;
-}
-.quote .famous footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin: 18px 0 0;
-  color: var(--green-mid);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-.quote .famous footer::before,
-.quote .famous footer::after {
-  content: "";
-  width: 28px;
-  height: 1px;
-  background: #c9d8d0;
-}
 .quote .lived {
-  margin: 28px auto 0;
+  margin: 0 auto;
   max-width: 40rem;
   text-align: center;
 }
