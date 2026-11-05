@@ -259,7 +259,7 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   display: grid;
   grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(32px, 5vw, 72px);
-  align-items: start;
+  align-items: center;
 }
 .work-intro { position: sticky; top: calc(var(--header) + 28px); }
 .work .lede { max-width: 28rem; }
