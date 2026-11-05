@@ -458,14 +458,12 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.quote .lived .spirit {
+.quote .lived .role {
   display: block;
   margin-top: 4px;
-  color: var(--ink);
-  font-family: var(--serif);
+  color: var(--muted);
+  font-size: 0.95rem;
   font-weight: 560;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
 }
 
 .week {
