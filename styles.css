@@ -447,6 +447,25 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
   font-size: 1.05rem;
   line-height: 1.6;
 }
+.quote .lived footer { margin-top: 16px; }
+.quote .lived cite {
+  display: block;
+  font-style: normal;
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.quote .lived .spirit {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
 
 .week {
   position: relative;
