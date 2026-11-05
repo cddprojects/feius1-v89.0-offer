@@ -227,48 +227,71 @@ p { margin: 0 0 14px; color: var(--muted); text-wrap: pretty; }
 }
 
 .work { padding: clamp(76px, 10vw, 116px) 0; }
-.work .lede { max-width: 40rem; }
+.work-split {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.work-intro { position: sticky; top: calc(var(--header) + 28px); }
+.work .lede { max-width: 28rem; }
+.work-note {
+  margin: 22px 0 0;
+  max-width: 28rem;
+  font-size: 1.02rem;
+}
 .skill-list,
 .overlook {
   list-style: none;
-  margin: 32px 0 0;
-  padding: 0;
-  border-top: 1px solid #dddcd4;
-}
-.skill-list li,
-.overlook li {
-  display: grid;
-  grid-template-columns: minmax(14rem, 0.85fr) minmax(0, 1.25fr);
-  gap: 8px 48px;
-  align-items: baseline;
-  padding: 22px 0;
-  border-bottom: 1px solid #dddcd4;
-}
-.skill-list h3,
-.overlook-label {
   margin: 0;
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 1.12rem;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
-  color: var(--ink);
+  padding: 0;
 }
-.skill-list p,
-.overlook li p:last-child { margin: 0; }
-.overlook { margin-top: 0; }
+.skill-list { display: flex; flex-direction: column; gap: 14px; }
+.skill-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 18px;
+  align-items: start;
+  margin: 0;
+  padding: 22px 22px 20px;
+  background: #fff;
+  border: 1px solid #e6e2d8;
+  border-radius: 22px;
+}
+.skill-list .num {
+  margin: 0;
+  font-size: 1.7rem;
+  color: var(--green-mid);
+}
+.skill-list h3 { margin: 2px 0 0; }
+.skill-list p { margin: 6px 0 0; }
+.overlook-panel {
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: clamp(28px, 4vw, 40px);
+  background: var(--sage);
+  border-radius: 28px;
+}
 .overlook-title {
-  margin: clamp(44px, 6vw, 68px) 0 0;
+  margin: 0;
   font-family: var(--serif);
   font-weight: 560;
   font-size: clamp(1.7rem, 2.6vw, 2.15rem);
   letter-spacing: -0.03em;
 }
-.work-note {
-  margin: 28px 0 0;
-  max-width: 40rem;
-  font-size: 1.02rem;
+.overlook {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 32px;
+  margin-top: 22px;
 }
+.overlook-label {
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  color: var(--forest);
+}
+.overlook li p:last-child { margin: 0; }
 
 .worth {
   background: var(--forest);
@@ -473,12 +496,11 @@ details[open] .chev::after { transform: scaleY(0); }
 }
 
 @media (max-width: 800px) {
-  .skill-list li,
-  .overlook li {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 18px 0;
-  }
+  .work-intro { position: static; }
+  .work-split { grid-template-columns: 1fr; gap: 28px; }
+  .work .lede,
+  .work-note { max-width: 40rem; }
+  .overlook { grid-template-columns: 1fr; gap: 18px; }
   .steps { grid-template-columns: 1fr; gap: 22px; }
   .steps li {
     display: grid;
