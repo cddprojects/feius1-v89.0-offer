@@ -802,6 +802,17 @@ details[open] .chev::after { transform: scaleY(0); }
 .page h1 { max-width: 12em; }
 .page p { max-width: 40rem; }
 .page a { color: var(--forest); font-weight: 700; text-underline-offset: 0.2em; }
+.policy { max-width: 44rem; }
+.policy .effective { margin-top: 0; color: var(--muted); font-size: 0.95rem; }
+.policy h2 {
+  margin: 36px 0 10px;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  scroll-margin-top: 96px;
+}
+.policy .contents,
+.policy ul { margin: 0 0 16px; padding-left: 1.25em; }
+.policy li { margin: 8px 0; }
+.policy li strong { color: var(--ink); }
 #work, #worth, #quote, #week, #faq, h2 { scroll-margin-top: 96px; }
 
 @media (min-width: 801px) {
