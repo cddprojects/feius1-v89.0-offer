@@ -109,6 +109,6 @@
     }
 
     form.setAttribute("data-lock", "1");
-    window.location.href = "thank-you.html";
+    window.location.href = "thank-you/";
   });
 })();
